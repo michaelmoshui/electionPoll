@@ -1,0 +1,26 @@
+<%- include("partials/electionHeader") -%>
+  <form class="nominate" action="/submit" method="post">
+    <h1>ELECT A CANDIDATE</h1>
+    <br>
+    <div class="submit-form">
+      <label for="position">Position</label>
+      <br>
+      <input type="text" name="position">
+      <br>
+      <label for="fname">First Name</label>
+      <br>
+      <input type="text" name="fname">
+      <br>
+      <label for="lname">Last Name</label>
+      <br>
+      <input type="text" name="lname">
+      <br>
+      <div class="agreement">
+        <input type="checkbox" name="checkbox" value="true">
+        <label for="checkbox" id="pledge">I solemnly swear that I have nominated the best candidate for this position.</label>
+      </div>
+      <br>
+      <button type="submit" name="button" class="btn" id="submit-vote">SUBMIT</button>
+    </div>
+  </form>
+<%- include("partials/electionFooter") -%>

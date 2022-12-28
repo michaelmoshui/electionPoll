@@ -1,0 +1,189 @@
+.container.main {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* elction page */
+.election-page {
+  text-align: left;
+  margin-left: 15px;
+}
+
+.title h1 {
+  font-size: 60px;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+  .election-page {
+    margin: 0;
+  }
+  .title {
+    text-align: left;
+  }
+  .position-dropdown {
+    text-align: right;
+  }
+}
+
+.position-dropdown-menu {
+  display: inline-block;
+  text-align: center;
+}
+.position-dropdown-menu ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.position-dropdown-button {
+  width: 250px;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #91d18b;
+  background-color: white;
+  outline-color: #679c62;
+  color: #91d18b;
+  font-weight: bold;
+}
+
+.position-dropdown-button span {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.position-dropdown-button:hover {
+  border: 2px solid #91d18b;
+  background-color: #91d18b;
+  color: white;
+}
+
+.position-dropdown-button:focus {
+  border: 2px solid #91d18b;
+  background-color: white;
+  color: #91d18b;
+}
+
+.position-button {
+  display: block;
+  width: 250px;
+  border: none;
+  border-bottom: 1px solid #91d18b;
+  border-left: 1px solid #91d18b;
+  border-right: 1px solid #91d18b;
+  background-color: white;
+  outline: none;
+  padding: 6px 0;
+  font-size: 20px;
+}
+
+.electionInfo {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+/* election chart page */
+.candidate {
+  margin-bottom: 20px;
+}
+
+.candidate:last-child {
+  margin: 0;
+}
+
+.candidate-name {
+  display: inline-block;
+  width: 200px;
+  word-wrap: break-word;
+  padding-right: 5px;
+}
+
+.candidate-name h2 {
+  font-size: 25px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.vote-count {
+  display: inline-block;
+  background-color: #91d18b;
+  height: 100px;
+  vertical-align: top;
+  text-align: right;
+}
+
+.vote-count h1 {
+  color: white;
+  margin-top: 30.5px;
+  margin-bottom: 30.5px;
+  margin-right: 10px;
+}
+
+.vote-chart hr {
+  border: none;
+  border-bottom: 2px solid #8a8a8a;
+  border-radius: 20px;
+}
+
+/* submit page */
+.nominate h1 {
+  display: inline-block;
+  font-size: 50px;
+  border-bottom: 1px solid black;
+}
+
+.submit-form {
+  text-align: center;
+}
+
+label {
+  margin: 15px;
+  font-size: 35px;
+  font-weight: lighter;
+}
+
+input[type = text] {
+  width: 350px;
+  height: 50px;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.agreement {
+  margin: 20px;
+  display: inline-block;
+  width: 400px;
+}
+
+.agreement input {
+  width: 20px;
+  height: 20px;
+}
+
+#pledge {
+  margin: 2px;
+  font-size: 20px;
+}
+
+#submit-vote {
+  margin-top: 5px;
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  border: 2px solid #96b2b5;
+  border-radius: 10px;
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #96b2b5;
+}
+
+#submit-vote:hover {
+  background-color: #96b2b5;
+  color: white;
+}

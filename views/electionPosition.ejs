@@ -1,0 +1,62 @@
+<%- include("partials/electionHeader") -%>
+<div class="election-page">
+  <div class="row">
+    <div class="col-lg-6 title">
+      <h1><%= electionName %></h1>
+    </div>
+    <div class="col-lg-6 position-dropdown">
+      <div class="position-dropdown-menu">
+        <button type="button" class="position-dropdown-button" onclick="this.blur()">
+          CHOOSE AN ELECTION
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </button>
+        <br>
+        <ul class="positions">
+          <form action="/elections" method="post">
+            <% positions.forEach(function(f) { %>
+            <button type="submit" class="position-button" name="button" value="<%= f.position %>"><%= f.position %></button>
+            <% }); %>
+          </form>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="vote-chart">
+    <% let voteBoxLengthFactor = 50; %>
+    <% if (max <= 12) { %>
+      <% voteBoxLengthFactor = 48; %>
+    <% } else if (max > 12 && max <= 15) {%>
+      <% voteBoxLengthFactor = 38; %>
+    <% } else if (max > 15 && max <= 19) {%>
+      <% voteBoxLengthFactor = 30; %>
+    <% } else if (max > 19 && max <= 23) {%>
+      <% voteBoxLengthFactor = 25; %>
+    <% } else if (max > 23 && max <= 29) {%>
+      <% voteBoxLengthFactor = 20; %>
+    <% } else if (max > 29 && max <= 37) {%>
+      <% voteBoxLengthFactor = 16; %>
+    <% } else if (max > 37 && max <= 46) {%>
+      <% voteBoxLengthFactor = 13; %>
+    <% } else if (max > 46 && max <= 59) {%>
+      <% voteBoxLengthFactor = 10; %>
+    <% } else if (max > 59 && max <= 75) {%>
+      <% voteBoxLengthFactor = 8; %>
+    <% } else {%>
+      <% voteBoxLengthFactor = 6; %>
+    <% }%>
+    <% candidates.forEach(function(f) { %>
+    <% let voteBoxLength = f.votes * voteBoxLengthFactor; %>
+    <div class="candidate">
+      <div class="candidate-name">
+        <h2><%= f.fname %></h2>
+        <h2><%= f.lname %></h2>
+      </div>
+      <div class="vote-count" style="width: <%= voteBoxLength %>px;">
+        <h1><%= f.votes %></h1>
+      </div>
+    </div>
+    <hr>
+    <% }); %>
+  </div>
+</div>
+<%- include("partials/electionFooter") -%>

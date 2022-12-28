@@ -1,0 +1,28 @@
+<%- include("partials/electionHeader") -%>
+<div class="election-page">
+  <div class="row">
+    <div class="col-lg-6 title">
+      <h1>Elections</h1>
+    </div>
+    <div class="col-lg-6 position-dropdown">
+      <div class="position-dropdown-menu">
+        <button type="button" class="position-dropdown-button" onclick="this.blur()">
+          CHOOSE AN ELECTION
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </button>
+        <br>
+        <ul class="positions">
+          <form action="/elections" method="post">
+            <% positions.forEach(function(f) { %>
+              <button type="submit" class="position-button" name="button" value="<%= f.position %>"><%= f.position %></button>
+            <% }); %>
+          </form>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="electionInfo">
+    <p>To choose an election, click on the drop down menu at the top right corner. To start an election or to nominate a candidate, click on the nominate tab at the menu above and fill in first name, last name, and position.</p>
+  </div>
+</div>
+<%- include("partials/electionFooter") -%>

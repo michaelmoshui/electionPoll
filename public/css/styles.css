@@ -1,0 +1,173 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container {
+  position: relative;
+}
+/* navigation bar */
+.navbar {
+    padding-top: 40px;
+    padding-bottom: 25px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    letter-spacing: 5px;
+    background-color: #ddf3f5;
+}
+
+.navbar-brand {
+  font-size: 4rem;
+}
+
+.nav-item {
+  padding: 5px 20px;
+}
+
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+
+/* dropdown */
+.dropdown-btn {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  margin: 12px;
+  padding: 0;
+  letter-spacing: 5px;
+  color: #777;
+}
+
+.dropdown-line {
+  margin: 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  border: none;
+  border-top: 1px solid black;
+}
+
+.drop-menu {
+  padding: 20px 10px 10px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.drop-menu a {
+  display: block;
+  margin-bottom: 10px;
+  color: #777;
+  text-decoration: none;
+}
+
+.drop-menu a:last-child {
+  margin-bottom: 0;
+}
+
+.drop-menu a:hover {
+  text-decoration: none;
+}
+
+.last-nav-item {
+  padding: 5px 0 5px 20px;
+}
+
+.sign-in {
+  font-size: 31px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  margin-left: 14px;
+  padding: 2px 10px;
+}
+
+.sign-in:hover {
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+
+.sign-in:focus {
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .navbar-right {
+    float: none !important;
+  }
+  .navbar-brand {
+    clear: both;
+  }
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav {
+    margin: 7.5px -15px;
+  }
+  .navbar-header {
+    float: none;
+  }
+  .navbar-nav>li>a {
+    padding: 10px;
+    padding-left: 15px;
+  }
+  .sign-in {
+    margin-left: 14px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar-brand {
+    padding-left: 30px;
+  }
+  .dropdown-btn {
+    margin-left: 15px;
+  }
+  .drop-menu {
+    margin-bottom: 5px;
+  }
+  .last-nav-item {
+    padding-top: 14px;
+  }
+}
+
+/* footer */
+#footer {
+  text-align: center;
+  background-color: #ddf3f5;
+  padding: 50px 24% 200px;
+}
+
+#footer a {
+  padding: 0 16px 0;
+  color: black;
+}
+
+#footer a:hover {
+  color: black;
+  opacity: 0.8;
+}
+
+#footer p {
+  display: block;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  margin-top: 15px;
+  color: black;
+}
